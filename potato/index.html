@@ -409,6 +409,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#initial-web-login-didnt-accept-the-apparent-credentials-enumeration-fuzzing-revealed-hints-in-logs-but-no-direct-access-final-access-came-from-an-ssh-brute-force-nmap-script-ssh-brute-which-found-webadmindragon-from-there-a-small-privilege-escalation-via-a-writable-notes-file-and-sudo-allowed-getting-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial web login didn’t accept the apparent credentials. Enumeration → fuzzing revealed hints in logs but no direct access. Final access came from an SSH brute force (nmap --script ssh-brute), which found webadmin:dragon. From there a small privilege escalation via a writable notes file and sudo allowed getting root.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#target-info" class="md-nav__link">
     <span class="md-ellipsis">
       Target info
@@ -427,9 +436,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-bak-file-suggested-the-adminpotato-credential-but-it-did-not-login-knowing-offsec-this-could-be-a-rabbit-hole" class="md-nav__link">
+    <span class="md-ellipsis">
+      The .bak file suggested the admin:potato credential but it did not login. Knowing Offsec, this could be a rabbit hole.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pivot-ssh-brute-force" class="md-nav__link">
     <span class="md-ellipsis">
       Pivot: SSH brute force
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-verified-manually-and-connected-via-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      I verified manually and connected via SSH.
     </span>
   </a>
   
@@ -448,6 +475,15 @@
   <a href="#walkthrough-correct-path" class="md-nav__link">
     <span class="md-ellipsis">
       Walkthrough / Correct path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-walkthrough-also-did-the-privesc-slightly-differently-by-creating-a-shell-in-the-home-directory-and-leveraging-that-with-the-sudo-command-instead-of-binsh-which-seems-like-an-unneccesary-extra-step-to-me-not-sure-why-that-is-suggested" class="md-nav__link">
+    <span class="md-ellipsis">
+      The walkthrough also did the Privesc slightly differently by creating a shell in the home directory and leveraging that with the sudo command instead of /bin/sh, which seems like an unneccesary extra step to me. Not sure why that is suggested.
     </span>
   </a>
   
@@ -524,8 +560,7 @@
 <strong>Date:</strong> 2025-09-22</p>
 <hr />
 <h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
-<p>Initial web login didn’t accept the apparent credentials. Enumeration → fuzzing revealed hints in logs but no direct access. Final access came from an SSH brute force (<code>nmap --script ssh-brute</code>), which found <code>webadmin:dragon</code>. From there a small privilege escalation via a writable <code>notes</code> file and <code>sudo</code> allowed getting root.</p>
-<hr />
+<h2 id="initial-web-login-didnt-accept-the-apparent-credentials-enumeration-fuzzing-revealed-hints-in-logs-but-no-direct-access-final-access-came-from-an-ssh-brute-force-nmap-script-ssh-brute-which-found-webadmindragon-from-there-a-small-privilege-escalation-via-a-writable-notes-file-and-sudo-allowed-getting-root">Initial web login didn’t accept the apparent credentials. Enumeration → fuzzing revealed hints in logs but no direct access. Final access came from an SSH brute force (<code>nmap --script ssh-brute</code>), which found <code>webadmin:dragon</code>. From there a small privilege escalation via a writable <code>notes</code> file and <code>sudo</code> allowed getting root.<a class="headerlink" href="#initial-web-login-didnt-accept-the-apparent-credentials-enumeration-fuzzing-revealed-hints-in-logs-but-no-direct-access-final-access-came-from-an-ssh-brute-force-nmap-script-ssh-brute-which-found-webadmindragon-from-there-a-small-privilege-escalation-via-a-writable-notes-file-and-sudo-allowed-getting-root" title="Permanent link">&para;</a></h2>
 <h2 id="target-info">Target info<a class="headerlink" href="#target-info" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Host: <code>192.168.103.101</code> (and later <code>192.168.152.101</code> after a reset)</li>
@@ -552,11 +587,10 @@
 <img alt="Admin login" src="../images/potato_login.png" /></p>
 </li>
 <li>
-<p>Fuzzing <code>/admin</code> for hidden files revealed /logs subdirectory that was not useful</p>
+<p>Fuzzing <code>/admin</code> revealed <code>/logs</code> subdirectory but was not useful</p>
 </li>
 </ul>
-<p>The .bak file suggested the <code>admin:potato</code> credential but it did <strong>not</strong> login. Knowing Offsec, this could be a rabbit hole.</p>
-<hr />
+<h2 id="the-bak-file-suggested-the-adminpotato-credential-but-it-did-not-login-knowing-offsec-this-could-be-a-rabbit-hole">The .bak file suggested the <code>admin:potato</code> credential but it did <strong>not</strong> login. Knowing Offsec, this could be a rabbit hole.<a class="headerlink" href="#the-bak-file-suggested-the-adminpotato-credential-but-it-did-not-login-knowing-offsec-this-could-be-a-rabbit-hole" title="Permanent link">&para;</a></h2>
 <h2 id="pivot-ssh-brute-force">Pivot: SSH brute force<a class="headerlink" href="#pivot-ssh-brute-force" title="Permanent link">&para;</a></h2>
 <p>Because the web login didn’t work and logs hinted at changes, I attempted an SSH brute force using nmap’s <code>ssh-brute</code> NSE script:</p>
 <div class="codehilite"><pre><span></span><code>nmap<span class="w"> </span>-p<span class="w"> </span><span class="m">22</span><span class="w"> </span>--script<span class="o">=</span>/usr/share/nmap/scripts/ssh-brute.nse<span class="w"> </span><span class="m">192</span>.168.152.101<span class="w"> </span>-oN<span class="w"> </span>scans/nmap-ssh-brute.txt
@@ -564,8 +598,7 @@
 
 <p><img alt="Nmap Bruteforce results" src="../images/potato_brute.png" /></p>
 <p><strong>Result:</strong> <code>webadmin:dragon</code> (valid credentials found).</p>
-<p>I verified manually and connected via SSH.</p>
-<hr />
+<h2 id="i-verified-manually-and-connected-via-ssh">I verified manually and connected via SSH.<a class="headerlink" href="#i-verified-manually-and-connected-via-ssh" title="Permanent link">&para;</a></h2>
 <h2 id="privesc">Privesc<a class="headerlink" href="#privesc" title="Permanent link">&para;</a></h2>
 <p>Once on the machine as <code>webadmin</code> I found some interesting sudo privileges via <code>sudo -l</code>:</p>
 <p><img alt="Privilege Escalation" src="../images/potato_pe.png" /></p>
@@ -582,8 +615,7 @@
 <p>After that, proxy the logs section within the admin dashboard, which allows for an LFI.</p>
 <p><img alt="LFI" src="../images/potato_lfi.png" /></p>
 <p>/etc/passwd shows the hash for webadmin, which can be cracked very easily with john.</p>
-<p>The walkthrough also did the Privesc slightly differently by creating a shell in the home directory and leveraging that with the sudo command instead of <code>/bin/sh</code>, which seems like an unneccesary extra step to me. Not sure why that is suggested.</p>
-<hr />
+<h2 id="the-walkthrough-also-did-the-privesc-slightly-differently-by-creating-a-shell-in-the-home-directory-and-leveraging-that-with-the-sudo-command-instead-of-binsh-which-seems-like-an-unneccesary-extra-step-to-me-not-sure-why-that-is-suggested">The walkthrough also did the Privesc slightly differently by creating a shell in the home directory and leveraging that with the sudo command instead of <code>/bin/sh</code>, which seems like an unneccesary extra step to me. Not sure why that is suggested.<a class="headerlink" href="#the-walkthrough-also-did-the-privesc-slightly-differently-by-creating-a-shell-in-the-home-directory-and-leveraging-that-with-the-sudo-command-instead-of-binsh-which-seems-like-an-unneccesary-extra-step-to-me-not-sure-why-that-is-suggested" title="Permanent link">&para;</a></h2>
 <h2 id="lessons-takeaways">Lessons &amp; takeaways<a class="headerlink" href="#lessons-takeaways" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Don’t overlook the code in a file, even if it appears to be leaking creds</li>
