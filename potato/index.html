@@ -529,7 +529,7 @@
 <h2 id="target-info">Target info<a class="headerlink" href="#target-info" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Host: <code>192.168.103.101</code> (and later <code>192.168.152.101</code> after a reset)</li>
-<li>Services discovered (relevant): <code>22/tcp (ssh)</code>, <code>80/tcp (http),</code>, <code>2112/tcp (ftp)</code>  </li>
+<li>Services discovered (relevant): <code>22/tcp (ssh)</code>, <code>80/tcp (http)</code>, <code>2112/tcp (ftp)</code>  </li>
 </ul>
 <hr />
 <h2 id="enumeration">Enumeration<a class="headerlink" href="#enumeration" title="Permanent link">&para;</a></h2>
@@ -540,7 +540,8 @@ sudo<span class="w"> </span>nmap<span class="w"> </span>-Pn<span class="w"> </sp
 
 <p><img alt="Nmap results" src="../images/potato_nmap.png" /></p>
 <p>Downloaded <code>index.php.bak</code> from open FTP service on atypical port 2112, which contained username and password, but did not work.</p>
-<p><img alt="Anonymous FTP share" src="../images/potato_ftp.png" /></p>
+<p><img alt="Anonymous FTP share" src="../images/potato_ftp.png" />
+<img alt=".bak file" src="../images/potato_bak.png" /></p>
 <p>I also ran directory/file discovery and wordlist-based fuzzing (example):</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># feroxbuster or gobuster example</span>
 feroxbuster<span class="w"> </span>-u<span class="w"> </span>http://192.168.152.101<span class="w"> </span>-w<span class="w"> </span>/usr/share/wordlists/dirb/common.txt<span class="w"> </span>-n<span class="w"> </span>--add-slash
@@ -568,21 +569,16 @@ feroxbuster<span class="w"> </span>-u<span class="w"> </span>http://192.168.152.
 <p>I verified manually and connected via SSH.</p>
 <hr />
 <h2 id="privesc">Privesc<a class="headerlink" href="#privesc" title="Permanent link">&para;</a></h2>
-<p>Once on the machine as <code>webadmin</code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># check basic info</span>
-id
-uname<span class="w"> </span>-a
-ls<span class="w"> </span>-la<span class="w"> </span>/var/www/html/potato
+<p>Once on the machine as <code>webadmin</code> I found some interesting sudo privileges via <code>sudo -l</code>:</p>
+<p><img alt="Privilege Escalation" src="../images/potato_pe.png" /></p>
+<p>Escalation step I used to get root:</p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>/bin/nice<span class="w"> </span>/notes/../bin/sh
 </code></pre></div>
 
-<p>I found some interesting sudo privileges via <code>sudo -l</code>:</p>
-<p><img alt="Privilege Escalation" src="../images/potato_pe.png" /></p>
-<p>Escalation step I used to get root:
-<code>sudo /bin/nice /notes/../bin/sh</code></p>
 <hr />
 <h2 id="walkthrough-correct-path">Walkthrough / Correct path<a class="headerlink" href="#walkthrough-correct-path" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>admin:potato</code> looked promising (found in .bak file) but <strong>did not</strong> actually log in. The walkthrough referenced a <code>strcmp</code> bypass, which I overlooked in that .bak file. Essentially, this function compares strings (in this context to determine if password is correct and doesn't actually work), but one can edit the password variable with burp by adding <code>[]</code>, which turns it into an array to bypass the password, and logs in as long as the username is correct. </li>
+<li><code>admin:potato</code> looked promising (found in .bak file) but <strong>did not</strong> actually log in. The walkthrough referenced a strcmp bypass found in the .bak file. In short: the site code assumed the password POST parameter was a string and compared it using a string-compare routine. By editing the request in Burp and sending password[]= (i.e. making password an array), the server received the wrong type and the comparison behaved unexpectedly, allowing login as long as the username was correct. This is a type-validation bug — it works only because the application failed to validate input types before comparing credentials.</li>
 </ul>
 <p><img alt="strcmp bypass" src="../images/potato_strcmp.png" /></p>
 <p>After that, proxy the logs section within the admin dashboard, which allows for an LFI.</p>
