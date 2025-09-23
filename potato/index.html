@@ -534,8 +534,7 @@
 <hr />
 <h2 id="enumeration">Enumeration<a class="headerlink" href="#enumeration" title="Permanent link">&para;</a></h2>
 <p>I started with basic network/service enumeration (nmap):</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># quick service scan</span>
-sudo<span class="w"> </span>nmap<span class="w"> </span>-Pn<span class="w"> </span>-n<span class="w"> </span><span class="m">192</span>.168.103.101<span class="w"> </span>-sCV<span class="w"> </span>-p-<span class="w"> </span>--open<span class="w"> </span>-vvv
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>nmap<span class="w"> </span>-Pn<span class="w"> </span>-n<span class="w"> </span><span class="m">192</span>.168.103.101<span class="w"> </span>-sCV<span class="w"> </span>-p-<span class="w"> </span>--open<span class="w"> </span>-vvv
 </code></pre></div>
 
 <p><img alt="Nmap results" src="../images/potato_nmap.png" /></p>
@@ -543,8 +542,7 @@ sudo<span class="w"> </span>nmap<span class="w"> </span>-Pn<span class="w"> </sp
 <p><img alt="Anonymous FTP share" src="../images/potato_ftp.png" />
 <img alt=".bak file" src="../images/potato_bak.png" /></p>
 <p>I also ran directory/file discovery and wordlist-based fuzzing (example):</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># feroxbuster or gobuster example</span>
-feroxbuster<span class="w"> </span>-u<span class="w"> </span>http://192.168.152.101<span class="w"> </span>-w<span class="w"> </span>/usr/share/wordlists/dirb/common.txt<span class="w"> </span>-n<span class="w"> </span>--add-slash
+<div class="codehilite"><pre><span></span><code>feroxbuster<span class="w"> </span>-u<span class="w"> </span>http://192.168.152.101<span class="w"> </span>-w<span class="w"> </span>/usr/share/wordlists/dirb/common.txt<span class="w"> </span>-n<span class="w"> </span>--add-slash
 </code></pre></div>
 
 <p><img alt="Feroxbuster results" src="../images/potato_ferric1.png" /></p>
