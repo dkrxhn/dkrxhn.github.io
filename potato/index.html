@@ -481,9 +481,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-walkthrough-also-did-the-privesc-slightly-differently-by-creating-a-shell-in-the-home-directory-and-leveraging-that-with-the-sudo-command-instead-of-binsh-which-seems-like-an-unneccesary-extra-step-to-me-not-sure-why-that-is-suggested" class="md-nav__link">
+  <a href="#the-walkthrough-also-did-the-privesc-slightly-differently-by-creating-a-shell-in-the-home-directory-and-leveraging-that-with-the-sudo-command-instead-of-simply-using-the-built-in-shell-binsh-seems-like-an-unneccesary-extra-step" class="md-nav__link">
     <span class="md-ellipsis">
-      The walkthrough also did the Privesc slightly differently by creating a shell in the home directory and leveraging that with the sudo command instead of /bin/sh, which seems like an unneccesary extra step to me. Not sure why that is suggested.
+      The walkthrough also did the privesc slightly differently by creating a shell in the home directory and leveraging that with the sudo command instead of simply using the built in shell /bin/sh. Seems like an unneccesary extra step.
     </span>
   </a>
   
@@ -586,13 +586,13 @@
 <hr />
 <h2 id="walkthrough-correct-path">Walkthrough / Correct path<a class="headerlink" href="#walkthrough-correct-path" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>admin:potato</code> looked promising (found in .bak file) but <strong>did not</strong> actually log in. The walkthrough referenced a strcmp bypass found in the .bak file. In short: the site code assumed the password POST parameter was a string and compared it using a string-compare routine. By editing the request in Burp and sending password[]= (i.e. making password an array), the server received the wrong type and the comparison behaved unexpectedly, allowing login as long as the username was correct. This is a type-validation bug — it works only because the application failed to validate input types before comparing credentials.</li>
+<li><code>admin:potato</code> looked promising (found in .bak file) but <strong>did not</strong> actually log in. The walkthrough referenced a strcmp bypass found in the .bak file. In short: the site code assumed the password POST parameter was a string and compared it using a string-compare routine. By editing the request and adding brackets to the variable in Burp and sending password[]= (i.e. making password an array), the server received the wrong type and the comparison behaved unexpectedly, allowing login as long as the username was correct. This is a type-validation bug. It works only because the application failed to validate input types before comparing credentials.</li>
 </ul>
 <p><img alt="strcmp bypass" src="../images/potato_strcmp.png" /></p>
-<p>After that, proxy the logs section within the admin dashboard, which allows for an LFI.</p>
+<p>After that, use burp to proxy the logs section within the admin dashboard, which allows for an LFI.</p>
 <p><img alt="LFI" src="../images/potato_lfi.png" /></p>
 <p>/etc/passwd shows the hash for webadmin, which can be cracked very easily with john.</p>
-<h2 id="the-walkthrough-also-did-the-privesc-slightly-differently-by-creating-a-shell-in-the-home-directory-and-leveraging-that-with-the-sudo-command-instead-of-binsh-which-seems-like-an-unneccesary-extra-step-to-me-not-sure-why-that-is-suggested">The walkthrough also did the Privesc slightly differently by creating a shell in the home directory and leveraging that with the sudo command instead of <code>/bin/sh</code>, which seems like an unneccesary extra step to me. Not sure why that is suggested.<a class="headerlink" href="#the-walkthrough-also-did-the-privesc-slightly-differently-by-creating-a-shell-in-the-home-directory-and-leveraging-that-with-the-sudo-command-instead-of-binsh-which-seems-like-an-unneccesary-extra-step-to-me-not-sure-why-that-is-suggested" title="Permanent link">&para;</a></h2>
+<h2 id="the-walkthrough-also-did-the-privesc-slightly-differently-by-creating-a-shell-in-the-home-directory-and-leveraging-that-with-the-sudo-command-instead-of-simply-using-the-built-in-shell-binsh-seems-like-an-unneccesary-extra-step">The walkthrough also did the privesc slightly differently by creating a shell in the home directory and leveraging that with the sudo command instead of simply using the built in shell <code>/bin/sh</code>. Seems like an unneccesary extra step.<a class="headerlink" href="#the-walkthrough-also-did-the-privesc-slightly-differently-by-creating-a-shell-in-the-home-directory-and-leveraging-that-with-the-sudo-command-instead-of-simply-using-the-built-in-shell-binsh-seems-like-an-unneccesary-extra-step" title="Permanent link">&para;</a></h2>
 <h2 id="lessons-takeaways">Lessons &amp; takeaways<a class="headerlink" href="#lessons-takeaways" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Don’t overlook the code in a file, even if it appears to be leaking creds</li>
