@@ -436,9 +436,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-bak-file-suggested-the-adminpotato-credential-but-it-did-not-login-knowing-offsec-this-could-be-a-rabbit-hole" class="md-nav__link">
+  <a href="#the-bak-file-suggested-the-adminpotato-credential-but-it-did-not-login-tried-other-common-combinations-but-no-luck-knowing-offsec-this-could-be-a-rabbit-hole" class="md-nav__link">
     <span class="md-ellipsis">
-      The .bak file suggested the admin:potato credential but it did not login. Knowing Offsec, this could be a rabbit hole.
+      The .bak file suggested the admin:potato credential but it did not login. Tried other common combinations, but no luck. Knowing Offsec, this could be a rabbit hole.
     </span>
   </a>
   
@@ -567,7 +567,7 @@
 <p>Fuzzing <code>/admin</code> revealed <code>/logs</code> subdirectory but was not useful</p>
 </li>
 </ul>
-<h2 id="the-bak-file-suggested-the-adminpotato-credential-but-it-did-not-login-knowing-offsec-this-could-be-a-rabbit-hole">The .bak file suggested the <code>admin:potato</code> credential but it did <strong>not</strong> login. Knowing Offsec, this could be a rabbit hole.<a class="headerlink" href="#the-bak-file-suggested-the-adminpotato-credential-but-it-did-not-login-knowing-offsec-this-could-be-a-rabbit-hole" title="Permanent link">&para;</a></h2>
+<h2 id="the-bak-file-suggested-the-adminpotato-credential-but-it-did-not-login-tried-other-common-combinations-but-no-luck-knowing-offsec-this-could-be-a-rabbit-hole">The .bak file suggested the <code>admin:potato</code> credential but it did <strong>not</strong> login. Tried other common combinations, but no luck. Knowing Offsec, this could be a rabbit hole.<a class="headerlink" href="#the-bak-file-suggested-the-adminpotato-credential-but-it-did-not-login-tried-other-common-combinations-but-no-luck-knowing-offsec-this-could-be-a-rabbit-hole" title="Permanent link">&para;</a></h2>
 <h2 id="pivot-ssh-brute-force">Pivot: SSH brute force<a class="headerlink" href="#pivot-ssh-brute-force" title="Permanent link">&para;</a></h2>
 <p>Because the web login didn’t work and logs hinted at changes, I attempted an SSH brute force using nmap’s <code>ssh-brute</code> NSE script:</p>
 <div class="codehilite"><pre><span></span><code>nmap<span class="w"> </span>-p<span class="w"> </span><span class="m">22</span><span class="w"> </span>--script<span class="o">=</span>/usr/share/nmap/scripts/ssh-brute.nse<span class="w"> </span><span class="m">192</span>.168.152.101<span class="w"> </span>-oN<span class="w"> </span>scans/nmap-ssh-brute.txt
