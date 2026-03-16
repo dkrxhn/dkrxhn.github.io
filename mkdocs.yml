@@ -13,20 +13,160 @@ theme:
     - search.suggest
     - search.highlight
   palette:
-    - scheme: default
-      primary: teal
-      accent: teal
-    - scheme: slate
-      primary: teal
-      accent: teal
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
+    scheme: slate
+    primary: black
+    accent: lime
 
 nav:
   - Home: index.md
-  - Writeups:
-      - Potato: potato.md
+  - Active Directory:
+      - Blackfield (HTB): blackfield-htb.md
+      - Monteverde (HTB): monteverde-htb.md
+      - retro2 (VL): retro2-vl.md
+      - Trusted (VL) chain: trusted-vl-chain.md
+      - Hokkaido (PG): hokkaido-pg.md
+      - Sauna (HTB): sauna-htb.md
+      - Resourced (PG): resourced-pg.md
+      - Forest (HTB): forest-htb.md
+      - Enterprise (THM): enterprise-thm.md
+      - EscapeTwo (HTB): escapetwo-htb.md
+      - Escape (HTB): escape-htb.md
+      - Sendai (VL): sendai-vl.md
+      - Cicada (HTB): cicada-htb.md
+      - Lustrous (VL): lustrous-vl.md
+      - Vault (PG): vault-pg.md
+      - Breach (VL): breach-vl.md
+      - Return (HTB): return-htb.md
+      - Access (PG): access-pg.md
+      - thefrizz (HTB): thefrizz-htb.md
+      - Flight (HTB): flight-htb.md
+      - Puppy (HTB): puppy-htb.md
+      - Hybrid (VL): hybrid-vl.md
+      - Administrator (HTB): administrator-htb.md
+      - sweep (VL): sweep-vl.md
+      - Timelapse (HTB): timelapse-htb.md
+      - Phantom (VL): phantom-vl.md
+      - Baby (VL): baby-vl.md
+      - Reflection (VL): reflection-vl.md
+      - Baby2 (VL): baby2-vl.md
+      - wreath (thm) network: wreath-thm-network.md
+      - Heron (VL): heron-vl.md
+      - Hutch (PG): hutch-pg.md
+      - Active (HTB): active-htb.md
+      - Certified (HTB): certified-htb.md
+  - Linux:
+      - nineveh (htb): nineveh-htb.md
+      - Clue (PG): clue-pg.md
+      - Apex (PG): apex-pg.md
+      - ZenPhoto (PG): zenphoto-pg.md
+      - Payday (PG): payday-pg.md
+      - Gaara (PG): gaara-pg.md
+      - devvortex (htb): devvortex-htb.md
+      - swagshop (htb): swagshop-htb.md
+      - Amaterasu (PG): amaterasu-pg.md
+      - Nibbles (HTB): nibbles-htb.md
+      - BBScute (PG): bbscute-pg.md
+      - tartarsauce (HTB): tartarsauce-htb.md
+      - Pandora  (htb): pandora-htb.md
+      - Pebbles (PG): pebbles-pg.md
+      - popcorn (htb): popcorn-htb.md
+      - mentor (htb): mentor-htb.md
+      - openadmin (htb): openadmin-htb.md
+      - Marketing (PG): marketing-pg.md
+      - cozyhosting (HTB): cozyhosting-htb.md
+      - bashed (htb): bashed-htb.md
+      - Wombo (PG): wombo-pg.md
+      - Tomghost (thm): tomghost-thm.md
+      - updown (htb): updown-htb.md
+      - tabby (htb): tabby-htb.md
+      - Keeper (HTB): keeper-htb.md
+      - Nukem (PG): nukem-pg.md
+      - Lame (HTB): lame-htb.md
+      - ClamAV (PG): clamav-pg.md
+      - Knife (HTB): knife-htb.md
+      - Readys (PG): readys-pg.md
+      - quackerjack (PG): quackerjack-pg.md
+      - Pelican (PG): pelican-pg.md
+      - Cockpit (PG): cockpit-pg.md
+      - pyLoader (PG): pyloader-pg.md
+      - irked (htb): irked-htb.md
+      - Hetemit (PG): hetemit-pg.md
+      - codify (HTB): codify-htb.md
+      - Broker (HTB): broker-htb.md
+      - SolidState (HTB): solidstate-htb.md
+      - bullybox (PG): bullybox-pg.md
+      - networked (htb): networked-htb.md
+      - Flu (PG): flu-pg.md
+      - Sorcerer (PG): sorcerer-pg.md
+      - monitored (htb): monitored-htb.md
+      - BoardLight (htb): boardlight-htb.md
+      - postfish (PG): postfish-pg.md
+      - precious (htb): precious-htb.md
+      - Poison (HTB): poison-htb.md
+      - LazyAdmin (THM): lazyadmin-thm.md
+      - Silver Platter (thm): silver-platter-thm.md
+      - Snookums (PG): snookums-pg.md
+      - Hunit (PG): hunit-pg.md
+      - usage (htb): usage-htb.md
+      - Bratarina (PG): bratarina-pg.md
+      - Potato (PG): potato.md
+      - Loly (PG play): loly-pg-play.md
+      - Busqueda (HTB): busqueda-htb.md
+      - Peppo (PG): peppo-pg.md
+      - PC (PG): pc-pg.md
+      - Talisman (HS): talisman-hs.md
+      - Astronaut (PG): astronaut-pg.md
+      - analytics (htb): analytics-htb.md
+      - Hawat (PG): hawat-pg.md
+      - Sau (HTB): sau-htb.md
+      - Sunday (HTB): sunday-htb.md
+      - Sybaris (PG): sybaris-pg.md
+      - Extplorer (PG): extplorer-pg.md
+      - Walla (PG): walla-pg.md
+      - Exfiltrated (PG): exfiltrated-pg.md
+      - Fanatastic (PG): fanatastic-pg.md
+      - vmdak (PG): vmdak-pg.md
+      - Nibbles (PG): nibbles-pg.md
+      - Jarvis (HTB): jarvis-htb.md
+      - Pilgrimage (HTB): pilgrimage-htb.md
+      - Stapler (PG): stapler-pg.md
+  - Windows:
+      - Querier (htb): querier-htb.md
+      - blueprint (THM): blueprint-thm.md
+      - giddy (htb): giddy-htb.md
+      - Hack Smarter (thm): hack-smarter-thm.md
+      - StreamIO (HTB): streamio-htb.md
+      - Kevin (PG): kevin-pg.md
+      - Craft (PGP): craft-pgp.md
+      - NETMON (htb): netmon-htb.md
+      - Heist (PG): heist-pg.md
+      - Algernon (PG): algernon-pg.md
+      - Arctic (HTB): arctic-htb.md
+      - Object (HTB): object-htb.md
+      - Manager (HTB): manager-htb.md
+      - Authby (PG): authby-pg.md
+      - Blue (HTB): blue-htb.md
+      - Helpdesk (PG): helpdesk-pg.md
+      - allsignspoint2pwnage (thm): allsignspoint2pwnage-thm.md
+      - sniper (htb): sniper-htb.md
+      - ServMon (HTB): servmon-htb.md
+      - Support (HTB): support-htb.md
+      - Mailing (HTB): mailing-htb.md
+      - Driver (HTB): driver-htb.md
+      - Squid (PG): squid-pg.md
+      - Escape (VL): escape-vl.md
+      - Chatterbox (htb): chatterbox-htb.md
+      - Jacko (PG): jacko-pg.md
+      - cyberlens (THM): cyberlens-thm.md
+      - Intelligence (HTB): intelligence-htb.md
+      - Jeeves (HTB): jeeves-htb.md
+      - jerry (HTB): jerry-htb.md
+      - Craft2 (PG): craft2-pg.md
+      - Nara (PG): nara-pg.md
+      - Internal (PG): internal-pg.md
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
