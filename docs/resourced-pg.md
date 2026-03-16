@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** Resourced (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-12-17
 
 ---

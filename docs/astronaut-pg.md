@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Astronaut (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-10-10
 
 ---

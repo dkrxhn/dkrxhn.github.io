@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy / Beginner
 **Box:** Knife (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-04-16
 
 ---

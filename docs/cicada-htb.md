@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Cicada (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-04-05
 
 ---

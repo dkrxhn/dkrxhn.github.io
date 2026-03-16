@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** Trusted (Vulnlab)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-09-27
 
 ---

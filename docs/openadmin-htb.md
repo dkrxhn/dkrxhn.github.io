@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** OpenAdmin (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-01-12
 
 ---

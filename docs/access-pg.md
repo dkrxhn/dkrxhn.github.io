@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Access (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-06-15
 
 ---

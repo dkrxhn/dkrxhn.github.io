@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Stapler (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-12-14
 
 ---

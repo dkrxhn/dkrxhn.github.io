@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Payday (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-08-07
 
 ---

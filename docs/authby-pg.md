@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Authby (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-04-28
 
 ---

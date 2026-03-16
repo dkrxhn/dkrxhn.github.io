@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** TartarSauce (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-11-19
 
 ---

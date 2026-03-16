@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Baby2 (Vulnlab)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-10-22
 
 ---

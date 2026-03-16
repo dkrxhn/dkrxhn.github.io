@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** EscapeTwo (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-02-14
 
 ---

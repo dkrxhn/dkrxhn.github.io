@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Nibbles (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-11-30
 
 ---

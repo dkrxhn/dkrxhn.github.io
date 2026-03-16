@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Mentor (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-01-02
 
 ---

@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Poison (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-08-09
 
 ---

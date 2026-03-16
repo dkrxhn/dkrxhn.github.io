@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Jarvis (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-12-04
 
 ---

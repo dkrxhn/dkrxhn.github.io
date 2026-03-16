@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Sendai (Vulnlab)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-03-20
 
 ---

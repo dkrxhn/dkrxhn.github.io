@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy / Beginner
 **Box:** Internal (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-12-09
 
 ---

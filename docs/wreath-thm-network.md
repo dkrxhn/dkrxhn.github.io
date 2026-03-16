@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Wreath (TryHackMe) -- Network
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-11-01
 
 ---

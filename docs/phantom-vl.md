@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** Phantom (Vulnlab)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-09-22
 
 ---

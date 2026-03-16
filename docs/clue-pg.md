@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** Clue (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-06-10
 
 ---

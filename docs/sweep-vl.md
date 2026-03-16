@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Sweep (Vulnlab)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-08-28
 
 ---

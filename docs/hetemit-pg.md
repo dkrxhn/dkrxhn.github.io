@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Hetemit (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-05-29
 
 ---

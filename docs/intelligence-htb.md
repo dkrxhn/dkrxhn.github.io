@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Intelligence (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-10-20
 
 ---

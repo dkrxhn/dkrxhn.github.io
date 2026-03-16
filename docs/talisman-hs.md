@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Talisman (HackSec)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-10-05
 
 ---

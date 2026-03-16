@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Pebbles (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-12-12
 
 ---

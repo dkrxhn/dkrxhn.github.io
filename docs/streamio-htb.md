@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** StreamIO (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-11-07
 
 ---

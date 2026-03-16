@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Squid (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-08-23
 
 ---

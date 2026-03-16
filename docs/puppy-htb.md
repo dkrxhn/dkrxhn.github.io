@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** Puppy (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-07-25
 
 ---

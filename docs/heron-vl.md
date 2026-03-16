@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Heron (Vulnlab)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-11-13
 
 ---

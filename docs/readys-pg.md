@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Readys (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-04-24
 
 ---

@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Popcorn (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-12-23
 
 ---

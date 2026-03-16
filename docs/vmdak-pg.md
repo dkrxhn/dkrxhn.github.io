@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** Vmdak (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-11-25
 
 ---

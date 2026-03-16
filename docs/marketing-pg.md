@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** Marketing (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-01-17
 
 ---

@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** Apex (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-06-24
 
 ---

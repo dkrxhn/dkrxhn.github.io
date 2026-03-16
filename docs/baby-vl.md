@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Baby (Vulnlab)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-10-02
 
 ---

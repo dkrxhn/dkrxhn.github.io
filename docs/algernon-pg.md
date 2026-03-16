@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy / Beginner
 **Box:** Algernon (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-02-19
 
 ---

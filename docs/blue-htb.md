@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy / Beginner
 **Box:** Blue (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-05-15
 
 ---

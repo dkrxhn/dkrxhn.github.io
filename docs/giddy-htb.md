@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Giddy (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-09-03
 
 ---

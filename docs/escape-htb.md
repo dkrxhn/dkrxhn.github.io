@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Escape (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-03-04
 
 ---

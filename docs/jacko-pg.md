@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Jacko (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-09-27
 
 ---

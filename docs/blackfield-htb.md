@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** Blackfield (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-04-18
 
 ---

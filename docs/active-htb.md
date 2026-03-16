@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy / Beginner
 **Box:** Active (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-12-02
 
 ---

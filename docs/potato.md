@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy / Beginner  
 **Box:** Potato (Proving Grounds)  
-**Author:** dkrxhn  
+**Author:** dsec  
 **Date:** 2025-09-22
 
 ---

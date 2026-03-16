@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** LazyAdmin (TryHackMe)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-08-14
 
 ---

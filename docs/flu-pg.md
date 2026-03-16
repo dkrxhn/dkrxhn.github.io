@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Flu (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-07-07
 
 ---

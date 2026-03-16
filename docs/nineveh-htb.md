@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Nineveh (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-03-21
 
 ---

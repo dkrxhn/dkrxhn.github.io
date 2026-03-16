@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Querier (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-05-26
 
 ---

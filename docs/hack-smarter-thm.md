@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Hack Smarter (TryHackMe)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-10-11
 
 ---

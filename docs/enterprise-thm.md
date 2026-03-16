@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Enterprise (TryHackMe)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-01-22
 
 ---

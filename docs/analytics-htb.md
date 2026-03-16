@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Analytics (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-10-15
 
 ---

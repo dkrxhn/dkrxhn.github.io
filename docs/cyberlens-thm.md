@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** CyberLens (TryHackMe)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-10-07
 
 ---

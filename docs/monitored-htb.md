@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Monitored (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-07-16
 
 ---

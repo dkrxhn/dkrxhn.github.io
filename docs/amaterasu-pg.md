@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Amaterasu (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-10-18
 
 ---

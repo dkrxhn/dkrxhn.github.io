@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Broker (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-06-11
 
 ---

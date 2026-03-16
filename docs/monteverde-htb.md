@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Monteverde (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-07-06
 
 ---

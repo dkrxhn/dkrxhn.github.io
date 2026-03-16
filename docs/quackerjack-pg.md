@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Quackerjack (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-05-01
 
 ---

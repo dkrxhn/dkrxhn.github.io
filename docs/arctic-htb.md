@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Arctic (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-03-12
 
 ---

@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** Retro2 (Vulnlab)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-08-16
 
 ---

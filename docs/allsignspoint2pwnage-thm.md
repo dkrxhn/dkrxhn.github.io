@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** AllSignsPoint2Pwnage (TryHackMe)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-06-08
 
 ---

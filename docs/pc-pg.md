@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** PC (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-09-30
 
 ---

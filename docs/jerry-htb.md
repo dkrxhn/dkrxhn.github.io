@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy / Beginner
 **Box:** Jerry (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-11-09
 
 ---

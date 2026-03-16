@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** ZenPhoto (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-07-17
 
 ---

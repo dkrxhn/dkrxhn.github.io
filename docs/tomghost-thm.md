@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Tomghost (TryHackMe)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-02-23
 
 ---

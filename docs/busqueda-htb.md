@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Busqueda (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-09-19
 
 ---

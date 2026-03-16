@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Breach (Vulnlab)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-05-20
 
 ---

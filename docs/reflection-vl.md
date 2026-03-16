@@ -2,7 +2,7 @@
 
 **Difficulty:** Hard
 **Box:** Reflection (Vulnlab)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-10-12
 
 ---

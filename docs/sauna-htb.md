@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Sauna (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-11-25
 
 ---

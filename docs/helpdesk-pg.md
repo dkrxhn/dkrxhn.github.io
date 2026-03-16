@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Helpdesk (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-05-26
 
 ---

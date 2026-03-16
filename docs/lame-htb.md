@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Lame (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-04-01
 
 ---

@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** BBSCute (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-11-13
 
 ---

@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** SolidState (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-06-18
 
 ---

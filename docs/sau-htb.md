@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Sau (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-10-25
 
 ---

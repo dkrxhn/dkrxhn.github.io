@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy / Beginner
 **Box:** pyLoader (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-05-19
 
 ---

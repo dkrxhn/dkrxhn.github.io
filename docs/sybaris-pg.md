@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Sybaris (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-11-04
 
 ---

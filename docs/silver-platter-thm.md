@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Silver Platter (TryHackMe)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-08-20
 
 ---

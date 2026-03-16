@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** SwagShop (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-10-04
 
 ---

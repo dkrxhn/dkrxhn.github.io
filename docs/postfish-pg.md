@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Postfish (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-07-28
 
 ---

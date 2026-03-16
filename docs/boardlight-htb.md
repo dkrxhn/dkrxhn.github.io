@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** BoardLight (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-07-22
 
 ---

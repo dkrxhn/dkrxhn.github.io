@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Loly (PG Play)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-09-14
 
 ---

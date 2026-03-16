@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Blueprint (TryHackMe)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-07-28
 
 ---

@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Certified (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-12-11
 
 ---

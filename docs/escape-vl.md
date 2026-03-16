@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Escape (Vulnlab)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-09-06
 
 ---

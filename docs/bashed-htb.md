@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Bashed (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-02-05
 
 ---

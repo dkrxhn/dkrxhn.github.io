@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Walla (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-11-11
 
 ---

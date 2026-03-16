@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Pandora (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-12-06
 
 ---

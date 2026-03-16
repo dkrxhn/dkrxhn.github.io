@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Irked (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-05-22
 
 ---

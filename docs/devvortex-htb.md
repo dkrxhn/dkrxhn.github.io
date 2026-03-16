@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 **Box:** Devvortex (HackTheBox)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-09-11
 
 ---

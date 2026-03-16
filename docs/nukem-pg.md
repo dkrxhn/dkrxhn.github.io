@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Nukem (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-03-24
 
 ---

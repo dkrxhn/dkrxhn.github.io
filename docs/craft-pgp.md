@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 **Box:** Craft (PG Play)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2024-12-28
 
 ---

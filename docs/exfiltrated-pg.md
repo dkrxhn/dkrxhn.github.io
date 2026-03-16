@@ -2,7 +2,7 @@
 
 **Difficulty:** Intermediate
 **Box:** Exfiltrated (Proving Grounds)
-**Author:** dkrxhn
+**Author:** dsec
 **Date:** 2025-11-16
 
 ---
